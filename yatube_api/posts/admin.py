@@ -36,9 +36,9 @@ class CommentAdmin(admin.ModelAdmin):
 class FollowAdmin(admin.ModelAdmin):
     list_display = ('pk',
                     'user',
-                    'author',)
-    search_fields = ('author',)
-    list_filter = ('author',)
+                    'following',)
+    search_fields = ('following',)
+    list_filter = ('following',)
     empty_value_display = '-пусто-'
 
 
