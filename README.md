@@ -47,7 +47,7 @@ API-->USER: Думает...
 USER->INTERFACE: Взлом сервера
 ```
 
-And this will produce a flow chart:
+Можно попробовать еще такой сценарий использования:
 
 ```mermaid
 graph LR
