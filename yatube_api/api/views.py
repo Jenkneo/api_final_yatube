@@ -40,11 +40,7 @@ class FollowViewSet(viewsets.ModelViewSet):
         return user.follower.all()
 
     def perform_create(self, serializer):
-        if self.request.data['following'] == self.request.user.username:
-            return Response({'error': 'Нельзя подписаться на себя!'},
-                            status=status.HTTP_400_BAD_REQUEST)
-        else:
-            serializer.save(user=self.request.user)
+        serializer.save(user=self.request.user)
 
 
 class CommentViewSet(viewsets.ModelViewSet):
