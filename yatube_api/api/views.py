@@ -1,4 +1,4 @@
-from rest_framework import viewsets, permissions, filters, status
+from rest_framework import viewsets, permissions, filters
 from rest_framework.pagination import LimitOffsetPagination
 from .permissions import IsAuthorOrReadOnly
 from django.shortcuts import get_object_or_404
@@ -6,7 +6,6 @@ from .serializers import (
     CommentSerializer, PostSerializer, GroupSerializer, FollowSerializer)
 from posts.models import Post, Group, Comment, Follow
 from django.contrib.auth import get_user_model
-from rest_framework.response import Response
 
 
 User = get_user_model()
